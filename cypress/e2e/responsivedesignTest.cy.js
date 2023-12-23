@@ -1,17 +1,14 @@
 import Index from "../pageObjects"
 
-describe("responsive design",()=>{
-    
+describe("responsive design",()=>{   
     describe("on phone",()=>{
-        
         ["portrait","landscape"].forEach(orientation =>{
         describe(`in ${orientation}`,()=>{     
             const response = new Index();
         beforeEach(()=>{
-            cy.visit("/")  
+            cy.visit("http://localhost/opencart/index.php")  
             cy.viewport("iphone-6",orientation)
-        })          
-            
+        })           
          it("check the header of the page",()=>{
             response.checkHeader()
          })
@@ -37,15 +34,12 @@ describe("responsive design",()=>{
 
     describe("on tablet",()=>{
         ["portrait","landscape"].forEach(orientation =>{
-            describe(`in ${orientation}`,()=>{
-               
+            describe(`in ${orientation}`,()=>{  
                 const response = new Index();
             beforeEach(()=>{
-                cy.visit("/")  
+                cy.visit("http://localhost/opencart/index.php")  
                 cy.viewport("ipad-2",orientation)
-            })
-                
-                
+            })  
              it("check the header of the page",()=>{
                  response.checkHeader()
              })
@@ -75,8 +69,6 @@ describe("responsive design",()=>{
                 response.checkFooter()
             })
                 })
-                
-    
             })
     })
 

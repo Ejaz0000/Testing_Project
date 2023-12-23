@@ -43,7 +43,7 @@ describe('Buy products',()=>{
             cy.get("a[class='btn btn-primary']").click()
             cy.get('#input-firstname').type('ejaz');
             cy.get('#input-lastname').type('ahmed');
-            cy.get('#input-email').type('ejaz9982@gmail.com');
+            cy.get('#input-email').type('ejaz99820@gmail.com');
             cy.get('#input-shipping-address-1').type('street01');
             cy.get('#input-shipping-city').type('dhaka');
             cy.get('#input-password').type('password123');
@@ -53,8 +53,6 @@ describe('Buy products',()=>{
             cy.get("#button-register").click()
 
             cy.xpath("//button[normalize-space()='Confirm Order']").should('be.disabled')
-            
-
              
         })
 
@@ -70,7 +68,7 @@ describe('Buy products',()=>{
             cy.get("a[class='btn btn-primary']").click()
             cy.get('#input-firstname').type('ejaz');
             cy.get('#input-lastname').type('ahmed');
-            cy.get('#input-email').type('ejaz8892@gmail.com');
+            cy.get('#input-email').type('ejaz8890@gmail.com');
             cy.get('#input-shipping-address-1').type('street01');
             cy.get('#input-shipping-city').type('dhaka');
             cy.get('#input-password').type('password123');
@@ -92,9 +90,7 @@ describe('Buy products',()=>{
             cy.get('#button-payment-method').click()
             cy.wait(1000)
             cy.get('#button-confirm').click()
-            cy.get("div[id='content'] h1").should('contain','Your order has been placed!')
-
-             
+            cy.get("div[id='content'] h1").should('contain','Your order has been placed!')   
         })
       
     

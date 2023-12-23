@@ -17,7 +17,7 @@ describe('Product Search Functionality', () => {
         cy.xpath("//body/main/div[@id='product-search']/div[@class='row']/div[@id='content']/div[@id='product-list']/div").should("have.length.above",0)
       });
 
-    it('Search for a Product by catagory', () => {
+    it('Search for a Product by category', () => {
         const searchTerm = 'Desktop'; 
         cy.get("input[placeholder='Search']").type(searchTerm);
         cy.get('.btn.btn-light.btn-lg').click();
